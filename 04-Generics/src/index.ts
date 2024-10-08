@@ -68,7 +68,7 @@ class Storage1<T> {
     }
   }
 }
-
+const objnew = new Storage1<string>();
 // Generic utility type
 
 interface CourseGoal {
@@ -77,4 +77,7 @@ interface CourseGoal {
   completeUntil: Date;
 }
 
-const randomList: Readonly<string[]> = ["PRatik", "Rout"];
+const randomList: Readonly<string[]> = ["Pratik", "Rout"];
+// randomList.push("helo"); error as it is readonly
+// partial generic class
+const partialList: Partial<CourseGoal> = {}; // makes properties optional

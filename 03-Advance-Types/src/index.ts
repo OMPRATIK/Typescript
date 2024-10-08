@@ -128,7 +128,7 @@ const errorBag: ErrorContainer = {
   email: "not valid",
   username: "Must start with capital letter",
 };
-console.log(errorBag["email"]);
+console.log(errorBag.username);
 
 // Function Overload
 function add1(a: number, b: number): number;

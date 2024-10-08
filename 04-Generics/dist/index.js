@@ -47,3 +47,6 @@ class Storage1 {
     }
 }
 const randomList = ["PRatik", "Rout"];
+// randomList.push("helo"); error as it is readonly
+// partial generic class
+const partialList = {}; // makes properties optional

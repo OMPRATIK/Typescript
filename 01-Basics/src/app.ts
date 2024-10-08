@@ -14,3 +14,5 @@ console.log(genError("Not found", 404));
 // }
 
 // console.log(a);
+
+console.log(Math.floor(4));
