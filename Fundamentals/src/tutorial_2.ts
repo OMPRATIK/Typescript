@@ -38,8 +38,8 @@ console.log(productArray);
 // Challenge
 
 type productsType = { brand: string; year: number };
-let bike: { brand: string; year: number } = { brand: "Yamaha", year: 2010 };
-let laptop: { brand: string; year: number } = { brand: "Dell", year: 2020 };
+let bike: productsType = { brand: "Yamaha", year: 2010 };
+let laptop: productsType = { brand: "Dell", year: 2020 };
 
 let products: productsType[] = [bike, laptop];
 console.log(products);
