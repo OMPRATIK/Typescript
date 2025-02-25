@@ -52,7 +52,7 @@ function calculateScore(
 }
 
 let scoreAfterPenalty = calculateScore(100, 10);
-
+console.log(scoreAfterPenalty);
 function sum(message: string, ...numbers: number[]): string {
   return message + numbers.reduce((acc, curr) => acc + curr, 0);
 }

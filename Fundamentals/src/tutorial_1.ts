@@ -25,12 +25,12 @@ console.log(tax);
 // Literal type
 let responseStatus: "Pending" | "success" | "error" = "Pending";
 responseStatus = "success";
-
+console.log(responseStatus);
 // Type any -> Lets u opt out of type checking
 let notSure: any = 3;
 notSure = "not even sure";
 notSure = false;
-
+console.log(notSure);
 const books = ["Wings of fires", "Freedom", "Jujutsu Kaisen"];
 let foundBook: string | undefined;
 
