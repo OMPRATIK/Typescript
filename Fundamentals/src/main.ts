@@ -2,7 +2,7 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import "./tutorial_3.ts";
+import "./tutorial_4.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
