@@ -21,6 +21,11 @@ function createEmploye(employeData: employeeInput): employeeType {
 const employee1 = createEmploye({ name: "Pratik", age: 21 });
 console.log(employee1);
 
+// Typescript doesn't throw error for object passed to func having excess properties
+// it only checks for inline object. ITS INTENTIONAL BEHAVIOR
+const emp = { name: "Ishaan", age: 22, isGood: true };
+console.log(createEmploye(emp));
+
 function greetEmployee(employee: employeeType): void {
   console.log(
     `Hi ${employee.name}. You are ${employee.isActive ? "active" : "inactive"}`
@@ -33,7 +38,11 @@ function processData(
   input: string | number,
   config: { reverse: boolean } = { reverse: false }
 ) {
-  if (typeof input === "string") {
-    return input.toUpperCase();
+  if (typeof input === "number") {
+    return input * input;
   }
+  return config.reverse
+    ? input.split("").reverse().join("").toUpperCase()
+    : input.toUpperCase();
 }
+console.log(processData("Pratik", { reverse: true }));
