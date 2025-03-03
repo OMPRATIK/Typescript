@@ -5,6 +5,7 @@ const john: User = {
   name: "john",
   isActive: true,
 };
+
 const susan: User = {
   id: 1,
   name: "susan",
@@ -16,7 +17,8 @@ function createUser(user: User): User {
 
   return user;
 }
-
+createUser(john);
+createUser(susan);
 type Theme = "light" | "dark";
 
 function setTheme(t: Theme) {
@@ -24,7 +26,7 @@ function setTheme(t: Theme) {
 }
 
 const theme = setTheme("dark");
-
+console.log(theme);
 // Challenge
 type Employee = { id: number; name: string; department: string };
 type Manager = { id: number; name: string; employees: Employee[] };
@@ -64,7 +66,6 @@ const discountedBook: DiscountedBook = {
 console.log(book1, discountedBook);
 
 // Computed properties
-
 const propName = "age";
 type Animal = {
   [propName]: number;

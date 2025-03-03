@@ -63,3 +63,65 @@ const dellG5: Computer = {
 };
 
 console.log(dellG5.upgradeRam(16));
+
+interface Person {
+  name: string;
+
+  getDetails(): string;
+}
+
+// Reopenoing interface
+interface Person {
+  age: number;
+}
+
+interface DogOwner {
+  dogName: string;
+  getDogDetails(): string;
+}
+
+const person: Person = {
+  name: "Pratik",
+  age: 21,
+  getDetails() {
+    return `Name : ${this.name}, Age : ${this.age}`;
+  },
+};
+
+console.log(person.getDetails());
+
+// extend Employee
+interface Emloyee extends Person {
+  employeeId: number;
+}
+
+const employee: Emloyee = {
+  name: "Sri",
+  age: 30,
+  employeeId: 1242,
+  getDetails() {
+    return `Name : ${this.name}, Age : ${this.age}, Enployee ID : ${this.employeeId}`;
+  },
+};
+console.log(employee.getDetails());
+
+interface Manager extends Person, DogOwner {
+  managePeople(): void;
+}
+
+const manager: Manager = {
+  name: "Pratik",
+  age: 21,
+  dogName: "Doggy",
+  getDetails() {
+    return `Name : ${this.name}, Age : ${this.age}`;
+  },
+  getDogDetails() {
+    return `Dog Name : ${this.dogName}`;
+  },
+  managePeople() {
+    console.log("Manages people");
+  },
+};
+
+manager.managePeople();
