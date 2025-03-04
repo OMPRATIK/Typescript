@@ -70,7 +70,7 @@ interface Person {
   getDetails(): string;
 }
 
-// Reopenoing interface
+// Reopenoing interface -> Declaration merging
 interface Person {
   age: number;
 }
