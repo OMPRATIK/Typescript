@@ -122,3 +122,5 @@ const obj: Random = {
   name: "Silver hand",
 };
 console.log(obj);
+
+
